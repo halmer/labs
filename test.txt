@@ -1,0 +1,5 @@
+http://127.0.0.1:4001/password_strength.php?password=012abcXYZ789ABCxyz0
+
+http://127.0.0.1:4001/survey_saver.php?first_name=Jennifer&last_name=Psaki&email=j.psaki@state.gov&age=36
+
+http://127.0.0.1:4001/survey_info.php?email=j.psaki@state.gov
