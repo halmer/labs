@@ -1,31 +1,24 @@
 <?php
+    define('ERR_NO_FILE', 'no_file');
+    define('ERR_NO_ACCESS_TO_FILE', 'no_access');
+    define('OK', 'ok');
     require_once ('include/common.inc.php');
 
     header('Content-Type: text/plain');
     $filename = GetSurveyFilename('email');
-    $surveyInfo = GetSurveyFromFile($filename);
-    if ($surveyInfo == 'no_file')
+    $error = OK;
+    $surveyInfo = GetSurveyFromFile($filename, $error);
+    if ($error == OK)
     {
-        echo 'Файл ' . $filename . '.txt не найден.';
+        PrintSurvey($surveyInfo);
     }
     else
     {
-        if ($surveyInfo !== false)
+        if ($error == ERR_NO_FILE)
         {
-            echo(!empty ($surveyInfo['first_name']))
-                ? 'First Name: ' . $surveyInfo['first_name'] . "\n"
-                : 'First Name: ...' . "\n";
-            echo(!empty ($surveyInfo['last_name']))
-                ? 'Last Name: ' . $surveyInfo['last_name'] . "\n"
-                : 'Last Name: ...' . "\n";
-            echo(!empty ($surveyInfo['email']))
-                ? 'Email: ' . $surveyInfo['email'] . "\n"
-                : 'Email: ...' . "\n";
-            echo(!empty ($surveyInfo['age']))
-                ? 'Age: ' . $surveyInfo['age'] . "\n"
-                : 'Age: ...' . "\n";
+            echo 'Файл ' . $filename . '.txt не найден';
         }
-        else
+        if ($error == ERR_NO_ACCESS_TO_FILE)
         {
             echo 'Ошибка чтения';
         }
