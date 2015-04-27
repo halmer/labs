@@ -12,7 +12,7 @@
     {
         $header = GetView('header.html', $vars);
         $sidebar = GetView('sidebar.html', $vars);
-        $content =GetView($template, $vars);
+        $content = GetView($template, $vars);
         $footer = GetView('footer.html', $vars);
         return $header . $sidebar . $content . $footer;
     }
