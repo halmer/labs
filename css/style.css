@@ -4,6 +4,11 @@ body
     font: 0.92em/1.4 Arial;
 }
 
+img
+{
+    border: 0;
+}
+
 li.collapsed
 {
     list-style-type: none;
