@@ -2,6 +2,8 @@
     define('ERR_NO_NAME', 'no_name');
     define('ERR_NO_FILE', 'no_file');
     define('ERR_NO_ACCESS_TO_FILE', 'no_access');
+    define('ERR_UNABLE_TO_PARSE', 'unable_to_parse');
+    define('ERR_OK', 'ok');
 
     /**                                         
      * @return array
@@ -52,14 +54,31 @@
      */
     function GetSurveyFromFile($filename, &$errorCode)
     {
+        $errorCode = ERR_OK;
         $filePath = GetSurveyFilePath($filename);
         $survey = array();
-        $survey = (file_exists($filePath)) ? file_get_contents($filePath) : $errorCode = ERR_NO_FILE;
-        if ($survey === false)
+
+        if (!file_exists($filePath))
         {
-            $errorCode = ERR_NO_ACCESS_TO_FILE;
+            $errorCode = ERR_NO_FILE;
         }
-        return ($survey !== false) && ($errorCode !== ERR_NO_FILE) ? unserialize($survey) : $survey;
+        if ($errorCode === ERR_OK)
+        {
+            $survey = file_get_contents($filePath);
+            if ( $survey === false )
+            {
+                $errorCode = ERR_NO_ACCESS_TO_FILE;
+            }
+        }
+        if ($errorCode === ERR_OK)
+        {
+            $survey = unserialize($survey);
+            if ($survey === false)
+            {
+                $errorCode = ERR_UNABLE_TO_PARSE;
+            }
+        }                                               
+        return ($errorCode === ERR_OK) ? $survey : false;
     }
 
     /**                                         
