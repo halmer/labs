@@ -1,5 +1,5 @@
 <?php
-    function GetView($template, $vars)
+    function GetView($template, $vars=array())
     {
         $smarty = new Smarty();
         $smarty->setTemplateDir(TEMPLATE_DIR);
@@ -8,7 +8,7 @@
         return $smarty->fetch($template);
     }
 
-    function BuildPage($template, $vars)
+    function BuildPage($template, $vars=array())
     {
         $header = GetView('header.html', $vars);
         $sidebar = GetView('sidebar.html', $vars);
