@@ -1,4 +1,25 @@
-<div class="content">
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-12 21:22:49
+         compiled from "C:\PS\web\server2go\htdocs\template\content.html" */ ?>
+<?php /*%%SmartyHeaderCode:7201553e5d444ee067-77992725%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '58cccbec44218e462b1f196b133cea15b09c894b' => 
+    array (
+      0 => 'C:\\PS\\web\\server2go\\htdocs\\template\\content.html',
+      1 => 1431458458,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '7201553e5d444ee067-77992725',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_553e5d444eef97_93465165',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_553e5d444eef97_93465165')) {function content_553e5d444eef97_93465165($_smarty_tpl) {?><div class="content">
   <h1>Тег &lt;canvas&gt;</h1>
   <div class="num_comments">
     <a href="#">комментариев: 36</a>
@@ -118,4 +139,4 @@
       <a href="#">Изображения</a>
     </div>
   </div>
-</div>
+</div><?php }} ?>

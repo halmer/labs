@@ -1,4 +1,25 @@
-﻿   
+<?php /* Smarty version Smarty-3.1.21-dev, created on 2015-05-12 21:03:54
+         compiled from "C:\PS\web\server2go\htdocs\template\footer.html" */ ?>
+<?php /*%%SmartyHeaderCode:14406553e5d444f9c57-39708087%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '99603d513bb7ced2d708b91d08e1a221788e8316' => 
+    array (
+      0 => 'C:\\PS\\web\\server2go\\htdocs\\template\\footer.html',
+      1 => 1431457267,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '14406553e5d444f9c57-39708087',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.21-dev',
+  'unifunc' => 'content_553e5d444ff2e8_41947977',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_553e5d444ff2e8_41947977')) {function content_553e5d444ff2e8_41947977($_smarty_tpl) {?>   
     <div class="footer">
       <div class="section">
         <h4>О сайте</h4>
@@ -51,4 +72,4 @@
       <p><a href="#">Подпишитесь на материалы сайта по RSS</a></p>
     </div>
   </body>
-</html>
+</html><?php }} ?>

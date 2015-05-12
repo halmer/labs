@@ -196,6 +196,7 @@ li.leaf
 {
     background: #4b4a45;
     width: 210px;
+    height: 1953px;
     float: left;
     border-right: 1px solid #a2a19f;    
 }
@@ -243,4 +244,349 @@ li.leaf
 {
     width: 169px;
     font-size: 14px;
+}
+
+a
+{
+    color: rgb(29, 103, 164);
+}
+
+a:visited
+{
+    color: rgb(144, 39, 142);
+}
+
+a:hover
+{
+    color: rgb(189, 32, 38);
+}
+
+.content
+{
+    margin-left: 220px;
+    padding: 40px 20px 20px;
+    margin-right: 260px;
+}
+
+h1
+{
+    margin: 0px 0px 0.3em;
+    font: 2.4em Georgia,Times,serif;
+    color: rgb(102, 102, 102);
+}
+
+h3, .exampleTitle
+{
+    font-size: 1.1em;
+    color: rgb(102, 102, 102);
+}
+
+.fig
+{
+    margin: 1.5em 0px 0px ! important;
+    text-align: center;
+}
+
+.figsign
+{
+    font: italic 1em Georgia;
+    color: rgb(102, 102, 102);
+    text-align: center;
+    margin: 0px 0px 1.3em ! important;
+}
+
+.exampleTitle
+{
+    font-weight: bold;
+    padding: 5px 0px 0px;
+}
+
+pre
+{
+    margin: 0px 0px 1em 30px;
+    background: none repeat scroll 0% 0% rgb(248, 247, 242);
+}
+
+pre code
+{
+    font: 14px "Courier New",Courier;
+    padding: 7px;
+}
+
+pre code
+{
+    display: block;
+}
+
+pre code
+{
+    border-right: 25px solid rgb(230, 227, 218);
+}
+
+pre code.no-buttons
+{
+    border-right: medium none;
+}
+
+.example-view
+{
+    float: right;
+    position: relative;
+    top: -65px;
+    right: 4px;
+    cursor: pointer;
+}
+
+.example-win
+{
+    padding-bottom: 7px;
+}
+
+.example
+{ 
+    margin: 0px ! important;
+    font-size: 9pt;
+    padding: 3px 0px;
+    text-align: right;
+}
+
+.example span
+{
+    border-left: 1px solid rgb(102, 102, 102);
+    padding: 4px;
+}
+
+.example .html
+{
+    border-right: 1px solid rgb(102, 102, 102);
+    margin-right: 3px;
+}
+
+.tag
+{
+    font-family: "Courier New", Courier, mono;
+    color: rgb(0, 102, 153);
+    font-weight: bold;
+}
+
+.value, .function .params
+{
+    color: rgb(57, 137, 47);
+    font-weight: normal;
+}
+
+.attribute
+{
+    color: rgb(182, 16, 57);
+    font-weight: normal;
+}
+
+pre .doctype
+{
+    color: rgb(0, 102, 153);
+}
+
+.keyword
+{
+    color: rgb(156, 34, 63);
+}
+
+.tag .keyword
+{
+    color: rgb(0, 102, 153);
+}
+
+.comment
+{
+    color: rgb(153, 153, 153);
+}
+
+.function
+{
+    font-weight: bold;
+}
+
+.number
+{
+    color: rgb(214, 86, 43);
+}
+
+.browser
+{
+    border-collapse: collapse;   
+    width: 100%;
+}
+
+.browser td
+{
+    padding: 2px;
+    text-align: center;
+    border: 1px solid rgb(51, 51, 51);
+}
+
+.br td
+{
+    background-color: rgb(250, 243, 210);
+}
+
+.br td, .sp td
+{
+    border-left: 3px double rgb(51, 51, 51);
+}
+
+.br td:first-child, .sp td:first-child
+{
+    border-left: 1px solid rgb(51, 51, 51);
+}
+
+.yes
+{
+    background: none repeat scroll 0% 0% rgb(206, 226, 211);
+}
+
+.no
+{ 
+    background: none repeat scroll 0% 0% rgb(242, 200, 200);
+}
+
+.sp td.yes span
+{
+    background: url('../images/icon_yes.png') no-repeat scroll 0px 50% transparent;
+}
+
+.ie, .cr, .sa, .op, .fx, .an, .ip, .sp span
+{
+    min-height: 16px;
+    padding-left: 20px;
+}
+
+.ie, .br .ie
+{
+    background: url('../images/browser_ie.png') no-repeat scroll 0% 0% transparent;
+}
+
+.cr, .br .cr
+{
+    background: url('../images/browser_cr.png') no-repeat scroll 0% 0% transparent;
+}
+
+.sa, .br .sa
+{
+    background: url('../images/browser_sa.png') no-repeat scroll 0% 0% transparent;
+}
+
+.op, .br .op
+{
+    background: url('../images/browser_op.png') no-repeat scroll 0% 0% transparent;
+}
+
+.fx, .br .fx
+{
+    background: url('../images/browser_fx.png') no-repeat scroll 0% 0% transparent;
+}
+
+.an, .br .an
+{
+    background: url('../images/browser_android.png') no-repeat scroll 0% 0% transparent;
+}
+
+.ip, .br .ip
+{
+    background: url('../images/browser_iphone.png') no-repeat scroll 0% 0% transparent;
+}
+
+.sp span
+{
+    padding-left: 16px;
+}
+
+.field-item
+{
+    display: inline-block;
+    background: url('../images/tag.png') no-repeat scroll 0px 2px transparent;
+    padding-left: 24px;
+    margin: 10px 16px 10px 0px;
+    font-size: 0.92em;
+}
+
+.field
+{
+    margin-left: 30px;
+}
+
+.content h3
+{
+    margin: 12px 0px -5px;
+}
+
+.content h3 + p
+{
+    margin-top: 10px;
+}
+
+.content h3 + pre
+{
+    margin-top: 10px;
+}
+
+.content .exampleTitle
+{
+    margin: 0.3em 0px -15px;
+}
+
+.content p
+{
+    margin: 1em 0px 1em 30px;
+}
+
+.standart
+{
+    width: 280px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    margin: 8px 0px 0px 30px;
+}
+
+.standart td
+{
+    border: 1px solid rgb(51, 51, 51);
+    padding: 2px;
+    text-align: center;
+}
+
+.standart td.h, .standart td.xh
+{
+    text-align: left;
+    background: none repeat scroll 0% 0% rgb(250, 243, 210);
+}
+
+.standart td.xh
+{
+    border-left: 3px double rgb(51, 51, 51);
+}
+
+.param
+{
+    margin: 0.5em 0px 0.5em 30px;
+}
+
+.param dt
+{
+    color: rgb(182, 16, 57);
+    float: left;
+}
+
+.param dd
+{
+    margin: 0.4em 0px 0.5em 6.5em;
+}
+
+.num_comments
+{
+    float: right;
+    background: url('../images/comments.png') no-repeat scroll 0px 4px transparent;
+    min-height: 20px;
+    padding-left: 24px;
+    font-size: 13px;
+    margin: -10px 0px 5px;
 }
