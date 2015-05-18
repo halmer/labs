@@ -1,0 +1,83 @@
+mysql.exe --port=7188 -u root
+
+SHOW DATABASES;
+SHOW WARNINGS;
+SHOW CREATE DATABASE rental;
+SHOW TABLES;
+SHOW CREATE TABLE dvd;
+DESCRIBE dvd;
+SELECT * FROM dvd;
+
+CREATE DATABASE rental;
+
+USE rental;
+CREATE TABLE dvd(
+	dvd_id INT(11) UNSIGNED AUTO_INCREMENT,
+	title VARCHAR(255),
+	production_year YEAR,
+	PRIMARY KEY (dvd_id));
+	
+CREATE TABLE customer(
+	customer_id INT(11) UNSIGNED AUTO_INCREMENT,
+	first_name VARCHAR(255),
+	last_name VARCHAR(255),
+	passport_code VARCHAR(10),
+	registration_date DATE,
+	PRIMARY KEY (customer_id));
+
+CREATE TABLE offer(
+	offer_id INT(11) UNSIGNED AUTO_INCREMENT,
+	dvd_id INT(11) UNSIGNED,
+	customer_id INT(11) UNSIGNED,
+	offer_date DATE,
+	return_date DATE,
+	PRIMARY KEY (offer_id));
+
+INSERT INTO dvd
+(title, production_year)
+VALUES
+('Crimea. The Way Home', 2015),
+('Seventeen Moments of Spring', 1973),
+('Way of the Dragon', 1972),
+('Dumb & Dumber', 1994),
+('Tangled', 2010),
+('Toy Story 3', 2010),
+('Despicable Me', 2010);
+
+INSERT INTO customer
+(first_name, last_name, passport_code, registration_date)
+VALUES
+('Jennifer', 'Psaki', 'B987654321', '2004-12-31'), 
+('Matthew', 'Lee', 'A123456789', '1995-06-07'),
+('Barack', 'Obama', 'O000000001', '2015-03-15'),
+('Chuck', 'Norris', 'Z999999999', '1940-03-09');
+
+INSERT INTO offer
+(dvd_id, customer_id, offer_date, return_date)
+VALUES
+(1, 3, '2015-03-15', NULL),
+(2, 2, '2012-08-01', '2012-08-12'),
+(3, 4, '1972-12-30', NULL),
+(4, 1, '2015-01-10', '2015-01-11');
+
+SELECT *
+FROM dvd
+WHERE production_year=2010
+ORDER BY title ASC;
+
+SELECT *
+FROM offer
+WHERE return_date IS NULL;
+
+SELECT *
+FROM dvd
+WHERE dvd_id IN (
+	SELECT dvd_id
+	FROM offer 
+	WHERE return_date IS NULL);
+
+SELECT c.first_name, c.last_name, d.title
+FROM offer AS o
+JOIN dvd AS d USING(dvd_id)
+JOIN customer AS c USING(customer_id)
+WHERE o.offer_date >= '2015-01-01';
