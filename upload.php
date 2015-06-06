@@ -8,6 +8,6 @@
     }
     if(isset($_POST['get']))
     {
-    	$vars['images'] = getUploadImages();
-	}
+        $vars['images'] = getUploadImages();
+    }
     echo BuildPage("upload.html", $vars);
