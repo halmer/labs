@@ -590,3 +590,21 @@ pre .doctype
     font-size: 13px;
     margin: -10px 0px 5px;
 }
+
+.upload
+{
+    margin-left: 220px;
+    padding: 40px 20px 20px;
+}
+
+.images
+{
+    list-style-type: none; 
+    margin-left: -40px  ;
+}
+
+.getImages
+{
+    margin-left: 220px;
+    padding: 20px;
+}

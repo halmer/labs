@@ -1,0 +1,16 @@
+﻿<form class="upload" action="upload.php" enctype="multipart/form-data" method="post">
+  Выберите файл для загрузки: 
+  <input type="file" name="photo" accept="image/jpeg, image/png, image/gif"><br />
+  <input type="submit" name="send" value="Отправить">
+  <div class="messages">
+  {$message}
+  </div>
+</form>
+<form class="getImages" action="upload.php" enctype="" method="post">
+  <input type="submit" name="get" value="Картинки">
+  <ul class="images">
+    {foreach from = $images item = image}
+    <li><img src="{$image}" alt="" /></li>
+    {/foreach}
+  </ul>
+</form>
